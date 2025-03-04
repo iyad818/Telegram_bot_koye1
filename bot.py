@@ -1,12 +1,12 @@
 import telebot
-import os
 
-TOKEN = os.getenv("7931337756:AAFpgGzj0mxsxN8iRjj7bqBRBRN2tZsmbQY")  # قراءة التوكن من المتغيرات البيئية
-bot = telebot.TeleBot(TOKEN)
+# إضافة التوكن مباشرة داخل الكود
+Token = "7931337756:AAFpgGzj0mxsxN8iRjj7bqBRBRN2tZsmbQY"
+
+bot = telebot.TeleBot(Token)
 
 @bot.message_handler(commands=['start'])
-def welcome(message):
-    bot.reply_to(message, "مرحبا بك! هذا البوت يعمل على استضافة Koyeb 🎉 نحن نصفق لـ Koyeb 🌹")
+def send_welcome(message):
+    bot.reply_to(message, "مرحبا بك! هذا البوت يعمل على استضافة Koyeb 🚀")
 
-print("✅ البوت يعمل...")
-bot.infinity_polling()
+bot.polling()
